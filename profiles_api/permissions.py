@@ -19,4 +19,4 @@ class UpdateOwnStatus(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
 
-        return obj.id == request.user.id
+        return obj.user_profile.id == request.user.id
